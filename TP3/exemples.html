@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./ressources/css/style.css">
+    <link rel="stylesheet" href="./ressources/css/exemples.css">
+    <link rel="stylesheet" href="./ressources/css/responsive.css">
+    <title>TP3</title>
+</head>
+
+<body>
+    <div id="page">
+        <!-- Header -->
+        <header>
+            <a href="./index.html"><img src="./ressources/images/logo.png" alt="Regex Logo"></a>
+            <ul>
+                <li><a href="index.html"><button type="button"><i class="fa-sharp fa-solid fa-house"></i> &nbsp;&nbsp;Accueil</button></a></li>
+                <li><a href=""><button type="button"><i class="fa-solid fa-lightbulb"></i> &nbsp;&nbsp;Exemples</button></a></li>
+                <li><a href="livres.html"><button type="button"><i class="fa-solid fa-book"></i> &nbsp;Livres</button></a></li>
+                <li><a href="contact.html"><button type="button"><i class="fa-solid fa-envelope"></i> &nbsp;Contact</button></a></li>
+            </ul>
+        </header>
+        <!-- Contenu principal -->
+        <main>
+            <div id="main-content">
+                <h1>Exemples pratiques</h1>
+                <div id="exemples">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Regex</th>
+                                <th scope="col">Correspond à n'importe quelle chaîne qui ...</th>
+                                <th scope="col">Exemple</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>^(From|Subjet|Date):</td>
+                                <td>
+                                    contient <code>From</code> ou <code>Subject</code> ou <code>Date</code> dans les entêtes d'un e-mail
+                                    suivi par deux points.
+                                </td>
+                                <td><code>From:</code> Jhon Doe</td>
+                            </tr>
+                            <tr>
+                                <td>^[A-Z].+\.$</td>
+                                <td>commence par une lettre majuscule suivie par n'importe quel caractère et qui se termine par un point.</td>
+                                <td><code>Ceci est un test pour experimenter avec les expressions régulières.</code></td>
+                            </tr>
+                            <tr>
+                                <td>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}</td>
+                                <td>correspond au format d'un IP adress (mais permettant en même temps un intervalle <strong>hors</strong> de 0 - 255)</td>
+                                <td>La machine hôte avait un adresse IP de <code>192.168.32.223</code> sur le réseau local.</td>
+                            </tr>
+                            <tr>
+                                <td>[Jj]an\.?(vier)? [0-9]{1,2}</td>
+                                <td>
+                                    correspond au :
+                                    <ul>
+                                        <li><code>Jan.</code> puis un ou deux chiffres exactement.</li>
+                                        <li><code>jan.</code> puis un ou deux chiffres exactement.</li>
+                                        <li><code>Janvier</code> puis un ou deux chiffres exactement.</li>
+                                        <li><code>janvier</code> puis un ou deux chiffres exactement.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Le mois de <code>jan.</code> est connue par une temperature très bas.</li>
+                                        <li>Les négociations débuteront le janvier 17</li>
+                                    </ul>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>"[^"]*"</td>
+                                <td>correspond à une chaîne de caractères entre deux <code>"</code>.</td>
+                                <td>Mr. Martin a donné le cours de <code>"programmation web I"</code> la dernière semaine.</td>
+                            </tr>
+                            <tr>
+                                <td>\$[0-9]+(\.[0-9][0-9])?</td>
+                                <td>commence par un chiffre au minimum et qui contient une fraction decimal qui est OPTIONNEL.</td>
+                                <td>
+                                    Un rabais sur cet article a fait diminué le prix de ce dernier de <code>$250.23</code> jusqu'à <code>$200</code> presque...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0?[0-9]|1[0-9]|2[0-3]</td>
+                                <td>correspond à un format de 24-heures.</td>
+                                <td>Le match de Hockey commence à <code>22h</code></td>
+                            </tr>
+                            <tr>
+                                <td>[-+]?[0-9]+(\.[0-9]+)?\s?[CFcf]</td>
+                                <td>commence par un chiffre ou un nombre qui représente une temperature donnée en Fahrenheit ou en Celsius.</td>
+                                <td>La temperature ressentie au Québc est à <code>-25 C</code> !</td>
+                            </tr>
+                            <tr>
+                                <td>\&lt;https?://[-a-z0-9R.:]+/[-a-z0-9R:@&?=+,.!/~+%$]+\.html?\&gt;</td>
+                                <td>correspond à un URL HTTP mais ça dépend du contexte de notre programme !!</td>
+                                <td>
+                                    Vous pouvez sauvegarder vos données sur le cloud en visistant <code>https://cegeplimoilou.ca/office</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>(\+1)?\s?\(?\d{3}\)?\s?\d{3}(\s|-)?\d{4}</td>
+                                <td>correspond a un numéro de téléphone de Canada.</td>
+                                <td>
+                                    <ul>
+                                        <li><code>+1 (418) 123-4567</code></li>
+                                        <li><code>+1(418)1234578</code></li>
+                                        <li><code>418 507-4321</code></li>
+                                        <li><code>+1 418 123 4567</code></li>
+                                        <li><code>4181234578</code></li>
+                                        <li>Pour plus d'info appelez nous sur : <code>418 123 4567</code></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <!-- Section advertisement -->
+        <aside>
+            <div id="ads">
+                <h6>Advertisement</h6>
+                <a href="https://www.cegeplimoilou.ca/" target="_blank"><img src="./ressources/images/ads/ad1.png" alt="Image2"></a>
+                <a href="https://fr-ca.facebook.com/FondationCegepLimoilou/" target="_blank"><img src="./ressources/images/ads/ad2.png" alt="Image1"></a>
+                <a href="https://continentcot.ca/blogue/" target="_blank"><img src="./ressources/images/ads/ad3.gif" alt="Image3"></a>
+                <!-- <a href="#page">Top page</a> -->
+            </div>
+        </aside>
+        <!-- Pied de la page -->
+        <footer>
+            <div id="footer-info">
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Regex dans la programmation</h4>
+                        <li><a href="https://perldoc.perl.org/perlre" target="_blank">Regex en Perl</a></li>
+                        <li><a href="https://www.w3schools.com/java/java_regex.asp" target="_blank">Regex en Java</a></li>
+                        <li><a href="https://learn.microsoft.com/fr-fr/dotnet/standard/base-types/regular-expressions" target="_blank">Regex en .NET</a></li>
+                        <li><a href="https://www.w3schools.com/php/php_regex.asp" target="_blank">Regex en PHP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Liens rapides</h4></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="">Exemples</a></li>
+                        <li><a href="livres.html">Livres</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Ressources externes</h4></li>
+                        <li><a href="https://www.lucaswillems.com/fr/articles/25/tutoriel-pour-maitriser-les-expressions-regulieres" target="_blank">Lucas Willems</a></li>
+                        <li><a href="https://www.rexegg.com/regex-consultant.html" target="_blank">Regex Egg</a></li>
+                        <li><a href="https://regex101.com/" target="_blank">Vérifier votre regex - site 1</a></li>
+                        <li><a href="https://regexr.com" target="_blank">Vérifier votre regex - site 2</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div id="footer-copyright-social">
+                <p>&copy; Programmation Web - TP3</p>
+                <ul>
+                    <li><a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

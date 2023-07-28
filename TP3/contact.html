@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./ressources/css/style.css">
+    <link rel="stylesheet" href="./ressources/css/contact.css">
+    <link rel="stylesheet" href="./ressources/css/responsive.css">
+    <title>TP3</title>
+</head>
+<body>
+    <div id="page">
+        <!-- Header -->
+        <header>
+            <a href="./index.html"><img src="./ressources/images/logo.png" alt="Regex Logo"></a>
+            <ul>
+                <li><a href="index.html"><button type="button"><i class="fa-sharp fa-solid fa-house"></i> &nbsp;&nbsp;Accueil</button></a></li>
+                <li><a href="exemples.html"><button type="button"><i class="fa-solid fa-lightbulb"></i> &nbsp;&nbsp;Exemples</button></a></li>
+                <li><a href="livres.html"><button type="button"><i class="fa-solid fa-book"></i> &nbsp;Livres</button></a></li>
+                <li><a href=""><button type="button"><i class="fa-solid fa-envelope"></i> &nbsp;Contact</button></a></li>
+            </ul>
+        </header>
+        <!-- Contenu principal -->
+        <main>
+            <div id="main-content">
+                <h1>Nous contacter</h1>
+                <div id="contact-form">
+                    <div id="contact">
+                        <form action="">
+                            <div class="user-data">
+                                <input type="text" id="fname" name="firstname" placeholder="Prénom">
+                            </div>
+                            
+                            <div class="user-data">
+                                <input type="text" id="lname" name="lastname" placeholder="Nom">
+                            </div>
+    
+                            <div class="user-data">
+                                <input type="email" id="email" name="email" placeholder="utilisateur@exemple.com">
+                            </div>
+    
+                            <div class="user-data">
+                                <input type="tel" id="tel" name="mobile" placeholder="Numéro de téléphone">
+                            </div>
+                            
+                            <div class="user-data">
+                                <textarea id="sujet" name="sujet" placeholder="Message"></textarea>
+                            </div>
+    
+                            <input type="submit" value="ENVOIE">
+                        </form>
+                    </div>
+                    <div id="infos">
+                        <p>Nous sommes ouverts à toute suggestion ou simplement pour discuter !</p>
+                        <div class="info">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <p><strong>Adresse :</strong> Cégep Limoilou (campus de Québec), 1300 8e Ave, Québec, QC G1J 5L5</p>
+                        </div>
+                        <div class="info">
+                            <span class="material-symbols-outlined">
+                                call
+                            </span>
+                            <p><strong>Téléphone :</strong> +1 418 123 4567</p>
+                        </div>
+                        <div class="info">
+                            <span class="material-symbols-outlined">
+                                alternate_email
+                            </span>
+                            <p><strong>Courriel :</strong> cegep@cegeplimoilou.ca</p>
+                        </div>
+                        <div class="info">
+                            <span class="material-symbols-outlined">
+                                public
+                            </span>
+                            <p><strong>Site :</strong> cegeplimoilou.ca</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Section advertisement -->
+        <aside>
+            <h6>Advertisement</h6>
+            <a href="https://www.cegeplimoilou.ca/" target="_blank"><img src="./ressources/images/ads/ad1.png" alt="Image2"></a>
+            <a href="https://fr-ca.facebook.com/FondationCegepLimoilou/" target="_blank"><img src="./ressources/images/ads/ad2.png" alt="Image1"></a>
+            <a href="https://continentcot.ca/blogue/" target="_blank"><img src="./ressources/images/ads/ad3.gif" alt="Image3"></a>
+        </aside>
+        <!-- Pied de la page -->
+        <footer>
+            <div id="footer-info">
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Regex dans la programmation</h4>
+                        <li><a href="https://perldoc.perl.org/perlre" target="_blank">Regex en Perl</a></li>
+                        <li><a href="https://www.w3schools.com/java/java_regex.asp" target="_blank">Regex en Java</a></li>
+                        <li><a href="https://learn.microsoft.com/fr-fr/dotnet/standard/base-types/regular-expressions" target="_blank">Regex en .NET</a></li>
+                        <li><a href="https://www.w3schools.com/php/php_regex.asp" target="_blank">Regex en PHP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Liens rapides</h4></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="exemples.html">Exemples</a></li>
+                        <li><a href="livres.html">Livres</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Ressources externes</h4></li>
+                        <li><a href="https://www.lucaswillems.com/fr/articles/25/tutoriel-pour-maitriser-les-expressions-regulieres" target="_blank">Lucas Willems</a></li>
+                        <li><a href="https://www.rexegg.com/regex-consultant.html" target="_blank">Regex Egg</a></li>
+                        <li><a href="https://regex101.com/" target="_blank">Vérifier votre regex - site 1</a></li>
+                        <li><a href="https://regexr.com" target="_blank">Vérifier votre regex - site 2</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div id="footer-copyright-social">
+                <p>&copy; Programmation Web - TP3</p>
+                <ul>
+                    <li><a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

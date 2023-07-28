@@ -1,0 +1,256 @@
+/* Phones - page 1 : index.html */
+@media only screen and (max-width: 576 px) {
+    body {
+        background-attachment: scroll;
+    }
+    #page {
+        font-size: 0.7em;
+        word-spacing: 0.1em;
+        line-height: 1.2em;
+    }
+    header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 10px;
+    }
+    #page header ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #page header ul li {
+        margin: 5px;
+    }
+    #page h1 {
+        font-size: 0.9em;
+    }
+    aside {
+        display: none;
+    }
+    table {
+        margin: 5px;
+    }
+    table th,
+    table td {
+        /* width: 75%; */
+        padding: 5px;
+        margin: 0;
+    }
+    #page video {
+        width: 350px;
+    }
+    main #main-content #histoire .container::after {
+        display: none;
+    }
+    main #main-content #histoire .timeline .left,
+    main #main-content #histoire .timeline .right
+    {
+        left: 0;
+    }
+    main #main-content #histoire .timeline .left::before {
+        display: none;
+    }
+    main #main-content #histoire .timeline .right::before {
+        display: none;
+    }
+    main #main-content #histoire .timeline .content {
+        padding: 10px;
+        width: fit-content;
+    }
+    main #main-content #ref #ref-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+    #page #main-content #livres {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #main-content #contact-form {
+        grid-template-columns: auto;
+    }
+    #main-content #contact-form #infos {
+        padding: 5px;
+    }
+    footer #footer-info {
+        display: grid;
+        grid-area: footer;
+        grid-template-columns: auto;
+    }
+    footer #footer-copyright-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+    #page {
+        font-size: 0.7em;
+        word-spacing: 0.1em;
+        line-height: 1.2em;
+    }
+    header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 10px;
+    }
+    #page header ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #page header ul li {
+        margin: 5px;
+    }
+    #page h1 {
+        font-size: 0.9em;
+    }
+    aside {
+        display: none;
+    }
+    table {
+        margin: 5px;
+    }
+    table th,
+    table td {
+        padding: 5px;
+        margin: 0;
+    }
+    #page video {
+        width: 350px;
+    }
+    main #main-content #histoire .container::after {
+        display: none;
+    }
+    main #main-content #histoire .timeline .left,
+    main #main-content #histoire .timeline .right
+    {
+        left: 0;
+    }
+    main #main-content #histoire .timeline .left::before {
+        display: none;
+    }
+    main #main-content #histoire .timeline .right::before {
+        display: none;
+    }
+    main #main-content #histoire .timeline .content {
+        padding: 10px;
+        width: fit-content;
+    }
+    main #main-content #ref #ref-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+    #page #main-content #livres {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #main-content #contact-form {
+        grid-template-columns: auto;
+    }
+    #main-content #contact-form #infos {
+        padding: 5px;
+    }
+    footer #footer-info {
+        display: grid;
+        grid-area: footer;
+        grid-template-columns: auto;
+    }
+    footer #footer-copyright-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Tablettes */
+@media only screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+    #page {
+        font-size: 0.8em;
+        word-spacing: 0.1em;
+        line-height: 1.2em;
+    }
+    main {
+        font-size: 1.2em;
+    }
+    header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 10px;
+    }
+    #page header ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #page header ul li {
+        margin: 5px;
+    }
+    #page h1 {
+        font-size: 0.9em;
+    }
+    table {
+        margin: 5px;
+    }
+    table th,
+    table td {
+        padding: 5px;
+        margin: 0;
+    }
+    #page video {
+        width: 350px;
+    }
+    main #main-content #ref #ref-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+    #page #main-content #livres {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #main-content #contact-form {
+        grid-template-columns: auto;
+    }
+    #main-content #contact-form #infos {
+        padding: 5px;
+    }
+    .info-livre {
+        text-align: center;
+    }
+    footer #footer-info {
+        display: grid;
+        grid-area: footer;
+        grid-template-columns: auto;
+    }
+    footer #footer-copyright-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Desktops */
+@media only screen and (max-width: 992px) {
+    h1 {
+        font-size: 0.9em;
+        overflow-wrap: break-word;
+    }
+    aside img {
+        width: 200px;
+    }
+    input {
+        font-size: 0.8em;
+    }
+    #infos {
+        overflow: auto;
+        font-size: 0.8em;
+    }
+    .info {
+        margin: 10px;
+    }
+}

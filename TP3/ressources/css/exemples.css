@@ -1,0 +1,21 @@
+/* Divers */
+code {
+    font-size: 1.5em;
+    color: orangered;
+}
+
+/* Contenu principal */
+#page #main-content #exemples table {
+    margin: 0 auto;
+    text-align: justify;
+}
+#page #main-content #exemples table th {
+    text-align: center;
+}
+#page #main-content #exemples table td:first-child {
+    width: 33%;
+}
+#page #main-content #exemples li {
+    list-style-type: disc;
+    text-align: justify;
+}

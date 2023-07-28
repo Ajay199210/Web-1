@@ -1,0 +1,67 @@
+#main-content #contact-form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#main-content #contact-form #contact {
+    font-family: 'Roboto', sans-serif;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    color: whitesmoke;
+    font-size: 1.075em;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+.user-data {
+    margin: 5px;
+}
+.user-data textarea {
+    height: 200px;
+    font-family: 'Robot', sans-serif;
+}
+input[type="submit"] {
+    background-color: #f5af19;
+    color: black;
+    width: 30%;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 5px orangered;
+}
+input[type="submit"]:active {
+    background-color: #f5af19c5;
+}
+#main-content #contact-form #infos {
+    background-color: rgba(85, 85, 85, 0.651);
+    padding: 25px;
+    border-radius: 10px;
+}
+.info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin: 25px;
+}
+.info span {
+    font-size: 1.3em;
+    border: 1px solid white;
+    color: #f5af19;
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.info p::first-letter {
+    font-size: 1em !important;
+}

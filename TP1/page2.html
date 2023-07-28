@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="./ressources/css/main.css">
+    <link rel="stylesheet" href="./ressources/css/page2.css">
+</head>
+
+<body>
+    <table>
+        <!-- ligne 1 -->
+        <tr id="header">
+            <th class="col1-width"><a href="index.html"><img id="logo" src="./ressources/images/cegep.png"
+                        alt="Image du Cégep" /></a></th> <!-- Cellule 1 -->
+            <th>
+                <h1>Programme d'informatique du CÉGEP de Limoilou</h1>
+            </th> <!-- Cellule 2 -->
+        </tr>
+        <!-- ligne 2 -->
+        <tr id="title">
+            <td class="col1-width line2-data" rowspan="2">
+                <!-- Cellule 3 -->
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./page1.html">Informations</a></li>
+                    <li>Images</li>
+                </ul>
+            </td>
+            <td class="line2-data">Image intéressantes</td> <!-- Cellule 4 -->
+        </tr>
+        <!-- ligne 3 -->
+        <tr id="content">
+            <td>
+                <!-- Cellule 5 -->
+                <h3>Quelques images intéressantes</h3>
+                <table>
+                    <caption>
+                        Photos prises sur l'internet pour un travail pratique
+                    </caption>
+                    <tr>
+                        <td><img src="./ressources/images/BobbyFischer.jpeg" alt="Bobby Fischer"></td>
+                        <td><img src="./ressources/images/MikhailTal.jpeg" alt="Mikhail Tal"></td>
+                        <td><img src="./ressources/images/AronNimzowitch.jpeg" alt="Aron Nimzowitch"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="./ressources/images/JeremySilman.jpeg" alt="Jeremy Silman book"></td>
+                        <td><img src="./ressources/images/jeremySilman2.png" alt="Jeremy Silman book"></td>
+                        <td><img src="./ressources/images/paulMorphy.jpg" alt="Paul Morphy"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="./ressources/images/alphaZeroAI.jpg" alt="AlphaZero AI"></td>
+                        <td><img src="./ressources/images/chessPieces.jpg" alt="Chess pieces"></td>
+                        <td><img src="./ressources/images/interestingFacts.jpg" alt="Intereseting facts about chess">
+                        </td>
+                    </tr>
+                </table>
+                <h3>Un vidéo intéressant</h3>
+                <video id="rubinstein" controls="controls" title="Akiba Rubinstein Immortal Game">
+                    <source src="./ressources/video/Rubinstein_Immortal_Chess_Game.mp4" type="video/mp4">
+                    <source src="./ressources/video/Rubinstein_Immortal_Chess_Game.webm" type="video/webm">
+                    <source src="./ressources/video/Rubinstein_Immortal_Chess_Game.ogg" type="video/ogg">
+                    <p>Akiba Rubinstein Immortale Game</p> <!-- un texte de substitution -->
+                </video>
+                <!-- PGN: Portable Game Notation  -->
+                <div id="pgn">
+                    <p><strong>Immortelle de Rubinstein : Notation du jeu</strong></p>
+                    <ol>
+                        <li>d4 d5</li>
+                        <li>Cf3 e6</li>
+                        <li>e3 c5</li>
+                        <li>c4 Cc6</li>
+                        <li>Cc3 Cf6</li>
+                        <li>dxc5 Fxc5</li>
+                        <li>a3 a6</li>
+                        <li>b4 Fd6</li>
+                        <li>Fb2 0-0</li>
+                        <li>Dd2 ?! De7</li>
+                        <li>Fd3 dxc4 !</li>
+                        <li>Fxc4 b5</li>
+                        <li>Fd3 Td8</li>
+                        <li>De2 Fb7</li>
+                        <li>0-0 Ce5</li>
+                        <li>Cxe5 Fxe5</li>
+                        <li>f4 Fc7</li>
+                        <li>e4 Tac8</li>
+                        <li>e5 ? Fb6+</li>
+                        <li>Rh1 Cg4 !!</li>
+                        <li>Fe4 Dh4</li>
+                        <li>g3 Txc3 !!</li>
+                        <li>gxh4 Td2 !!</li>
+                        <li>Dxd2 Fxe4+</li>
+                        <li>Dg2 Th3 !!</li>
+                    </ol>
+                    0-1, les blancs abandonnent.
+                </div>
+            </td> <!-- Fin cellule 5 -->
+        </tr>
+        <!-- ligne 4 -->
+        <tr id="footer">
+            <td colspan="2"> <!-- Cellule 6 -->
+                &copy; <a href="mailto:test@exemple.com">Author ...</a>
+                <a href="#header">Top Page</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./ressources/css/style.css">
+    <link rel="stylesheet" href="./ressources/css/timeline.css">
+    <link rel="stylesheet" href="./ressources/css/responsive.css">
+    <title>TP3</title>
+</head>
+<body>
+    <div id="page">
+        <!-- Header -->
+        <header>
+            <a href="./index.html"><img src="./ressources/images/logo.png" alt="Regex Logo"></a>
+            <ul>
+                <li><a href=""><button type="button"><i class="fa-sharp fa-solid fa-house"></i> &nbsp;&nbsp;Accueil</button></a></li>
+                <li><a href="exemples.html"><button type="button"><i class="fa-solid fa-lightbulb"></i> &nbsp;&nbsp;Exemples</button></a></li>
+                <li><a href="livres.html"><button type="button"><i class="fa-solid fa-book"></i> &nbsp;Livres</button></a></li>
+                <li><a href="contact.html"><button type="button"><i class="fa-solid fa-envelope"></i> &nbsp;Contact</button></a></li>
+            </ul>
+            <i class="fa-solid fa-bars"></i>
+        </header>
+        <!-- Contenu principal -->
+        <main>
+            <div id="main-content">
+                <h1>Introduction aux expressions régulières</h1>
+                <!-- Contenu principal - Définition de regex -->
+                <div id="def">
+                    <h2>Définition des expressions régulières</h2>
+                    <p>
+                        Une expression régulière ou regex (pour regular expressions) représente une suite ordonnée de caractères (chaîne de caractères) ayant une syntaxe bien définie et qui sert à décrire un ensemble de chaînes de caractères possibles.
+                        Elle permet de traiter un texte de façon puissante, souple et efficace en représentant des modèles de chaînes de caractère, ce qui la rend un outil très puissant.<br /><br />
+                        Regex existe dans des nombreux langages de programmation (p. ex. Javascript, Python, C#, etc.) ainsi que dans les éditeurs de texte qui ont cette fonctionnalité comme Visual Studio Code.
+                    </p>
+                    <p>Les exemples suivantes montre l'utilisation des expressions régulières :</p>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th scope="col">Expression régulière</th>
+                            <th scope="col">Mots décrits</th>
+                            <th scope="col">Mots non décrits</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>program</td>
+                                <td>"program"</td>
+                                <td>"Initiation à la <span>program</span>mation web", "<span>program</span>me"</td>
+                            </tr>
+                            <tr class="active">
+                                <td>^[M|m].*n$</td>
+                                <td>"Martin"</td>
+                                <td>"<span>martin</span>", "<span>Mn</span>"</td>
+                            </tr>
+                            <tr>
+                                <td>\$?[0-9]+</td>
+                                <td>"$10"</td>
+                                <td>"Le prix de cette article vaut <span>$10</span>", "Il a <span>20</span> ans"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Les expressions régulières sont aujourd’hui utilisées pour programmer des logiciels avec des fonctionnalités de lecture, de contrôle, de modification, et d'analyse de textes ainsi que dans la manipulation des langues formelles que sont les langages informatiques.<br /><br />
+                        Il y a plusieurs utilisations de telles expressions. Cette liste non exhaustive pourra mieux clarifier leur utilité :
+                    </p>
+                    <ul>
+                        <li>Recherchez des modèles de caractères spécifiques.</li>
+                        <li>Validation des données entrée par un utilisateur afin de s'assurer qu’il correspond à un modèle prédéfini (nom d'utilisateur, mot de passe, adresse e-mail...).</li>
+                        <li>Extrayez, modifiez, remplacez ou supprimez des sous-chaînes de texte.</li>
+                        <li>Générer des différents rapports incluant des textes pris et/ou modifiée par une expression régulière.</li>
+                        <li>Et ainsi de suite...</li>
+                    </ul>
+                    <p>Voici un vidéo pour avoir une idée générale des expressions régulières :</p>
+                    <video id="regexVideo" controls="controls" title="Regex en 100 secondes" poster="./ressources/images/regex-poster.png">
+                        <source src="./ressources/video/RegEx-in-100-seconds.mp4" type="video/mp4">
+                        <source src="./ressources/video/RegEx-in-100-seconds.webm" type="video/webm">
+                        <source src="./ressources/video/RegEx-in-100-seconds.ogg" type="video/ogg">
+                        <p>Regex en 100 secondes</p> <!-- un texte de substitution -->
+                    </video>
+                </div>
+                <hr />
+                <!-- Contenu principal - histoire -->
+                <div id="histoire">
+                    <h2>Un peu d'histoire</h2>
+                    <div class="timeline">
+                        <div class="container left">
+                            <div class="content">
+                                <h3 class="title">1940</h3>
+                                <p>Le système nerveux a été décrit par deux hommes scientifiques (Warren McCulloch et Walter Pitts) qui ont modélisé les neurones par des <a href="#termes">automates</a><sup><strong>*</strong></sup> simples.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container right">
+                            <div class="content">
+                                <h3 class="title">1956</h3>
+                                <p>Le logicien Stephen Cole Kleene, a ensuite décrit ces modèles en termes d’ensembles réguliers et d'automates.</p>
+                            </div>
+                        </div>
+                        <div class="container left">
+                            <div class="content">
+                                <h3 class="title">1959</h3>
+                                <p>Michael O. Rabin et Dana Scott proposent le premier traitement mathématique et rigoureux de ces concepts en 1959.</p>
+                            </div>
+                        </div>
+                        <div class="container right">
+                            <div class="content">
+                                <h3 class="title">1976</h3>
+                                <p>Ce qui leur vaudra le prix Turing en 1976.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Ken Thompson a mis en œuvre la notation de Kleene dans plusieurs programmes sous Unix comme l’éditeur qed, ed, et finalement dans grep, le fameux "Glogal Regular Expressions". Depuis lors, les expressions régulières ont été largement utilisées dans différentes utilitaires et langages de programmation nés sous <a href="#termes">Unix</a><sup><strong>**</strong></sup>, tels que awk, sed, Perl, Python, etc.</p>
+                    <p>
+                        <i><strong>NB : la notion d'expression régulière n'a pas le même sens dans le contexte de l'informatique appliquée et dans la théorie des langages formels.</strong></i>
+                    </p>
+                </div>
+                <hr />
+                <!-- Contenu principal - référence rapide -->
+                <div id="ref">
+                    <h2>Référence utile</h2>
+                    <p>Un guide de référence rapide pour les expressions régulières (regex), y compris les symboles, les intervalles, le regroupement, les assertions.</p>
+                    <p><i><strong>NB : svp notez bien que cette référence est non exhaustive !</strong></i></p>
+                    <div id="ref-container">
+                        <!-- Anchors -->
+                        <table>
+                            <caption>Anchors</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Caractère</th>
+                                <th scope="col">Interprétation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>^</td>
+                                    <td>Start of a string</td>
+                                </tr>
+                                <tr>
+                                    <td>$</td>
+                                    <td>End of string</td>
+                                </tr>
+                                <tr>
+                                    <td>\b</td>
+                                    <td>Word boundary</td>
+                                </tr>
+                                <tr>
+                                    <td>\B</td>
+                                    <td>Not word boundary</td>
+                                </tr>
+                                <tr>
+                                    <td>\&lt;</td>
+                                    <td>Start of word</td>
+                                </tr>
+                                <tr>
+                                    <td>\&gt;</td>
+                                    <td>End of word</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Quantifiers -->
+                        <table>
+                            <caption>Quantifiers</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Caractère</th>
+                                <th scope="col">Interprétation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>*</td>
+                                    <td>0 or more</td>
+                                </tr>
+                                <tr>
+                                    <td>+</td>
+                                    <td>1 or more</td>
+                                </tr>
+                                <tr>
+                                    <td>?</td>
+                                    <td>0 or 1</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Ajouter un ? à un quantificateur pour le rendre "non-greedy".</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Groups & Ranges -->
+                        <table>
+                            <caption>Groups & Ranges</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Caractère</th>
+                                <th scope="col">Interprétation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>.</td>
+                                    <td>Any character except new line (\n)</td>
+                                </tr>
+                                <tr>
+                                    <td>(a|b)</td>
+                                    <td>a or b</td>
+                                </tr>
+                                <tr>
+                                    <td>(...)</td>
+                                    <td>Group</td>
+                                </tr>
+                                <tr>
+                                    <td>(?:...)</td>
+                                    <td>Non-capturing group</td>
+                                </tr>
+                                <tr>
+                                    <td>[abc]</td>
+                                    <td>Range (a or b or c)</td>
+                                </tr>
+                                <tr>
+                                    <td>[^abc]</td>
+                                    <td>Not (a or b or c)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Les intervalles sont inclusives.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Character Classes -->
+                        <table>
+                            <caption>Character Classes</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Caractère</th>
+                                <th scope="col">Interprétation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\s</td>
+                                    <td>White space</td>
+                                </tr>
+                                <tr>
+                                    <td>\S</td>
+                                    <td>Not white space</td>
+                                </tr>
+                                <tr>
+                                    <td>\d</td>
+                                    <td>Digit</td>
+                                </tr>
+                                <tr>
+                                    <td>\D</td>
+                                    <td>Not digit</td>
+                                </tr>
+                                <tr>
+                                    <td>\w</td>
+                                    <td>Word</td>
+                                </tr>
+                                <tr>
+                                    <td>\W</td>
+                                    <td>Not word</td>
+                                </tr>
+                                <tr>
+                                    <td>\x</td>
+                                    <td>Hexadecimal digit</td>
+                                </tr>
+                                <tr>
+                                    <td>\O</td>
+                                    <td>Octal digit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Escape Sequences -->
+                        <table>
+                            <caption>Escape Sequences</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Caractère</th>
+                                <th scope="col">Interprétation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\</td>
+                                    <td>Escape following character</td>
+                                </tr>
+                                <tr>
+                                    <td>\Q</td>
+                                    <td>Begin literal sequence</td>
+                                </tr>
+                                <tr>
+                                    <td>\E</td>
+                                    <td>End literal sequence</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">"Échapper/escaping" est une façon de traiter littéralement les caractères qui ont une signification particulière dans les expressions régulières, plutôt que comme des caractères spéciaux.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Assertions -->
+                        <table>
+                            <caption>Assertions</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Caractère</th>
+                                <th scope="col">Interprétation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>?=</td>
+                                    <td>Looahead assertion</td>
+                                </tr>
+                                <tr>
+                                    <td>?!</td>
+                                    <td>Negative lookahead</td>
+                                </tr>
+                                <tr>
+                                    <td>?&lt;=</td>
+                                    <td>Lookbehind assertion</td>
+                                </tr>
+                                <tr>
+                                    <td>?!= or ?&lt;!</td>
+                                    <td>Negative lookbehind</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                    <dl id="termes">
+                        <dt>Automate</dt>
+                        <dd>* Dispositif reproduisant en autonomie une séquence d'actions prédéterminées sans l'intervention humaine</dd>
+                        <dt>Unix</dt>
+                        <dd>
+                            ** Unix, officiellement UNIX, est une famille de systèmes d'exploitation multitâche et multi-utilisateur dérivé du Unix d'origine créé par AT&T, le développement de ce dernier ayant commencé dans les années 1970 au centre de recherche de Bell Labs mené par Kenneth Thompson. Il repose sur un interpréteur ou superviseur (le shell) et de nombreux petits utilitaires, accomplissant chacun une action spécifique, commutables entre eux (mécanisme de "redirection") et appelés depuis la ligne de commande.
+
+                        </dd>
+                    </dl>
+            </div>
+        </main>
+        <!-- Section pub -->
+        <aside>
+            <div id="ads">
+                <h6>Advertisement</h6>
+                <a href="https://www.cegeplimoilou.ca/" target="_blank"><img src="./ressources/images/ads/ad1.png" alt="Image2"></a>
+                <a href="https://fr-ca.facebook.com/FondationCegepLimoilou/" target="_blank"><img src="./ressources/images/ads/ad2.png" alt="Image1"></a>
+                <a href="https://continentcot.ca/blogue/" target="_blank"><img src="./ressources/images/ads/ad3.gif" alt="Image3"></a>
+                <!-- <a href="#page">Top page</a> -->
+            </div>
+        </aside>
+        <!-- Pied de la page -->
+        <footer>
+            <div id="footer-info">
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Regex dans la programmation</h4>
+                        <li><a href="https://perldoc.perl.org/perlre" target="_blank">Regex en Perl</a></li>
+                        <li><a href="https://www.w3schools.com/java/java_regex.asp" target="_blank">Regex en Java</a></li>
+                        <li><a href="https://learn.microsoft.com/fr-fr/dotnet/standard/base-types/regular-expressions" target="_blank">Regex en .NET</a></li>
+                        <li><a href="https://www.w3schools.com/php/php_regex.asp" target="_blank">Regex en PHP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Liens rapides</h4></li>
+                        <li><a href="">Accueil</a></li>
+                        <li><a href="exemples.html">Exemples</a></li>
+                        <li><a href="livres.html">Livres</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><h4>Ressources externes</h4></li>
+                        <li><a href="https://www.lucaswillems.com/fr/articles/25/tutoriel-pour-maitriser-les-expressions-regulieres" target="_blank">Lucas Willems</a></li>
+                        <li><a href="https://www.rexegg.com/regex-consultant.html" target="_blank">Regex Egg</a></li>
+                        <li><a href="https://regex101.com/" target="_blank">Vérifier votre regex - site 1</a></li>
+                        <li><a href="https://regexr.com" target="_blank">Vérifier votre regex - site 2</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div id="footer-copyright-social">
+                <p>&copy; Programmation Web - TP3</p>
+                <ul>
+                    <li><a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

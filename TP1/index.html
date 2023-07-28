@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1</title>
+    <link rel="stylesheet" type="text/css" href="./ressources/css/main.css">
+</head>
+
+<body>
+    <table>
+        <!-- ligne 1 -->
+        <tr id="header">
+            <th class="col1-width"><img id="logo" src="./ressources/images/cegep.png" alt="Image du Cégep" /></th>
+            <!-- Cellule 1 -->
+            <th>
+                <h1>Programme d'informatique du CÉGEP de Limoilou</h1>
+            </th> <!-- Cellule 2 -->
+        </tr>
+        <!-- ligne 2 -->
+        <tr id="title">
+            <td class="col1-width line2-data" rowspan="2">
+                <!-- Cellule 3 -->
+                <ul>
+                    <li>Accueil</li>
+                    <li><a href="./page1.html">Informations</a></li>
+                    <li><a href="./page2.html">Images</a></li>
+                </ul>
+            </td>
+            <td class="line2-data">Les Échecs</td> <!-- Cellule 4 -->
+        </tr>
+        <!-- ligne 3 -->
+        <tr id="content">
+            <td>
+                <!-- Cellule 5 -->
+                <p>
+                    Le jeu d'échecs oppose deux adversaires placés de chaque côté d'un échiquier constitué de 64 cases
+                    alternant deux couleurs. <br /> Chaque joueur dispose de 16 pièces :
+                </p>
+                <ul>
+                    <li>Un roi</li>
+                    <li>Une dame</li>
+                    <li>Deux tours</li>
+                    <li>Deux fous</li>
+                    <li>Deux cavaliers</li>
+                    <li>Huits pions</li>
+                </ul>
+                <p><em><strong>But du jeu :</strong> placer le roi adverse en situation d'échec et mats.</em></p>
+                <p>
+                    Pleines de ressources sont disponibles en ligne pour apprendre les règles du jeu et
+                    s'améliorer.<br />
+                    Parmi les plus populaires sont <a href="https://chess.com" target="_blank">chess.com</a> et <a
+                        href="https://lichess.org" target="_blank">lichess</a>.
+                </p>
+                <p>
+                    C'est important aussi d'analyser les jeux des grands maîtres au fil du temps afin d'apprendre
+                    comment ils pensent et améliorer son jeu au fur et à mesure. On peut trouver une vaste répertoire.
+                    Un exemple d'un bon jeu est la célèbre partie de l'opéra
+                    jouée en octobre 1858 par Paul Morphy (blancs) face au duc de Brunswick (noire).</p>
+                <p>
+                    Voici un aperçu du jeu <em>(Vous pouvez cliquer sur l'image pour ouvrrir la page de l'analyse du jeu
+                        dans un nouvel onglet)</em>.
+                </p>
+                <figure>
+                    <a href="https://fr.wikipedia.org/wiki/Partie_de_l'op%C3%A9ra" target="_blank"><img
+                            src="ressources/images/OperaGame.gif" alt="Opera Game" /></a>
+                    <figcaption>The Opera Game</figcaption>
+                </figure>
+                <br />
+                <p>Une autre partie qui s'appelle "<a href="./page2.html#rubinstein">Immortal Game</a>" joué par Akiba
+                    Rubinstein, un joueur d''échecs polonais contre un autre grand maître polish Georg Rotweli.</p>
+            </td>
+        </tr>
+        <!-- ligne 4 -->
+        <tr id="footer">
+            <td colspan="2"> <!-- Cellule 6 -->
+                &copy; <a href="mailto:test@exemple.com">Author ...</a>
+                <a href="#header">Top Page</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="./ressources/css/main.css">
+    <link rel="stylesheet" href="./ressources/css/page1.css">
+</head>
+
+<body>
+    <table>
+        <!-- ligne 1 -->
+        <tr id="header">
+            <th class="col1-width">
+                <!-- Cellule 1 -->
+                <a href="index.html"><img id="logo" src="./ressources/images/cegep.png" alt="Image du Cégep" /></a>
+            </th>
+            <th>
+                <h1>Programme d'informatique du CÉGEP de Limoilou</h1>
+            </th> <!-- Cellule 2 -->
+        </tr>
+        <!-- ligne 2 -->
+        <tr id="title">
+            <td class="col1-width line2-data" rowspan="2">
+                <!-- Cellule 3 -->
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li>Informations</a></li>
+                    <li><a href="./page2.html">Images</a></li>
+                </ul>
+            </td>
+            <td class="line2-data">Informations intéressantes</td> <!-- Cellule 4 -->
+        </tr>
+        <!-- ligne 3 -->
+        <tr id="content">
+            <td>
+                <!-- Cellule 5 -->
+
+                <!-- Sommaire -->
+                <div id="summary">
+                    <h1>Sommaire</h1>
+                    <ol>
+                        <li>
+                            <a href="#prep">Préparation de l’échiquier</a>
+                            <ul>
+                                <li><a href="#notation">Notation algébrique</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#rules">Règles du jeu</a>
+                            <ol>
+                                <li>
+                                    <a href="#generale">Règles générales - Déplacement des pièces</a>
+                                    <ol>
+                                        <li>Le roi</li>
+                                        <li>La dame</li>
+                                        <li>La tour</li>
+                                        <li>Le fou</li>
+                                        <li>Le cavalier</li>
+                                        <li>Le pion</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <a href="#speciale">Règles spéciales</a>
+                                    <ol>
+                                        <li>Promotion</li>
+                                        <li>En passant</li>
+                                        <li>Le Roque</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#ending">Fin de la partie</a>
+                            <ol>
+                                <li>Échec et mat</li>
+                                <li>Partie nulle</li>
+                            </ol>
+                        </li>
+                        <li><a href="#progresser">Progresser aux Échecs</a></li>
+                        <li><a href="#info">Informations additionnelles</a></li>
+                    </ol>
+                </div> <!-- fin div summary -->
+
+                <!-- L'échiquier-->
+                <h1 id="prep">Préparation de l’échiquier</h1>
+                <p>Au début de chaque partie, l'échiquier doit être placé de sorte que le coin inférieur droite à une
+                    case blanche pour chaque camp du joueur. La position initiale des pièces est telle que la Reine
+                    blanche doit se trouver sur une case blanche et la Reine noire sur une case noire. A sa droite le
+                    Roi, puis le Fou, puis le Cavalier, puis la Tour. A la gauche de la Reine l'autre Fou, puis l'autre
+                    Cavalier, puis la deuxième Tour.</p>
+                <strong><em>Note</strong>: Il faut faire attention que la dame (reine) blanche sur case blanche, dame
+                noire sur case noire.</em>
+                <p>Voici un diagramme démontrant la position initiale de l'échiquier :</p>
+                <figure>
+                    <img src="./ressources/images/position_initial_echecs.png" alt="Position initiale de l'échiquier">
+                    <figcaption>Position initiale d'une partie d'échecs</figcaption>
+                </figure>
+                <p>
+                    Le joueur qui a les pièces blanches joue toujours en premier.<br />
+                    Cela constitue un petit avantage, parce que le joueur va avoir l’opportunité de développer ses
+                    pièces plus vite.
+                </p>
+                <h2 id="notation">Notation algébrique</h2>
+                <p>Pour noter le coup d'un joueur dans la notation algébrique, on indique :
+                <ul>
+                    <li>La nature de la pièce (par son code ou rien pour le pion).</li>
+                    <li>On note la pricse/capture par la lettre <b>x</b>.</li>
+                    <li>Et les coordonnées de la case d'arrivée.</li>
+                </ul>
+                </p>
+                <figure>
+                    <img src="./ressources/images/diagrammes/notation_algebrique.png"
+                        alt="Notation des cases de l'échiquier">
+                    <figcaption>Notation des cases d'un échiquier</figcaption>
+                </figure>
+
+
+                <!-- Règles -->
+                <h1 id="rules">Règles du jeu</h1>
+                <!--  Règles générales du jeu -->
+                <h2 id="generale">Règles générales: Déplacement des pièces</h2>
+                <p>
+                    Aux Échecs, chaque pièce à un déplacement différent de l'autre. C'est bien de noter d'abord que la
+                    seule pièce qui peut sauter par-dessus des autres pièces est le cavalier. Par contre, tous les
+                    pièces ne peuvent jamais partager une case avec une pièce de leur propre camp (c.à.d un pièce de la
+                    même couleur), main celles-ci peuvent prendre la place d’une pièce de l'aversaire en la capturant.
+                    En générale, le déplacement des pièces à plusieur motifs:
+                <ul>
+                    <li>Aider leurs alliées à defendre une position ou défendre contre la capture.</li>
+                    <li>Les mettre en position d’en capturer une autre pièce adverse.</li>
+                    <li>Atteindre une position stratégique (contrôler des cases importantes).</li>
+                </ul>
+                </p>
+                <div id="pieces">
+                    <div class="piece">
+                        <h4><img src="ressources/images/pieces/roi.png" alt="Image du roi">Le roi</h4>
+                        <hr />
+                        <p>
+                            Le roi peut bouger une seule case dans n'importe quelle direction:
+                        <ul>
+                            <li>
+                                Horizontalement:
+                                <ol>
+                                    <li>Vers la droite</li>
+                                    <li>Vers la gauche</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Verticalement:
+                                <ol>
+                                    <li>Vers le bas</li>
+                                    <li>Vers la gauche</li>
+                                </ol>
+                            </li>
+                            <li>Diagonale: en forme de X</li>
+                        </ul>
+                        Il n’a pas le droit de se placer sur une case où il serait en échec parceque dans ce cas, il
+                        pourrait être capturé. Au cas ou une pièce adverse (pas le roi adverse) l’attaque, cela
+                        s’appelle "échec au roi ou check en anglais".
+                        </p>
+                        <img class="diagramme" src="ressources/images/diagrammes/diagramme_roi.png" alt="">
+                    </div>
+                    <div class="piece">
+                        <h4><img src="ressources/images/pieces/reine.png" alt="Image de la reine">La dame/reine</h4>
+                        <hr />
+                        <p>
+                            La plus pièce forte du jeu est la dame (reine). Son déplacement est identique à celui du
+                            roi, donc elle peut se déplacer dans toutes les directions, sauf qu'elle puisse se déplacer
+                            aussi loin que le joueur le souhaite à condition de ne pas passer par-dessus d’autres pièces
+                            alliées. Elle peut capturer une pièce adverse; dans ce cas, elle doit s'arrêter sur la case
+                            de la capture.
+                        </p>
+                        <img class="diagramme" src="ressources/images/diagrammes/diagramme_dame.png"
+                            alt="Diagramme de la dame">
+                    </div>
+                    <div class="piece">
+                        <h4><img src="ressources/images/pieces/tour.png" alt="Image de la tour">La tour</h4>
+                        <hr />
+                        <p>
+                            La tour se déplace aussi loin que l'on désire mais seulement horizontalement (vers le côtés:
+                            droite ou gauche) et verticalement (vers le bas et le haut).
+                        </p>
+                        <img class="diagramme" src="ressources/images/diagrammes/diagramme_tour.png"
+                            alt="Diagramme de la tour">
+                    </div>
+                    <div class="piece">
+                        <h4><img src="ressources/images/pieces/fou.png" alt="Image du fou">Le fou</h4>
+                        <hr />
+                        <p>
+                            Le fou se déplace aussi loin que l'on désire, main juste en mouvement diagonale. L'élément
+                            unique des foux c'est que chacun à sa propre couleur, alors dès le début du jeu, il y aura
+                            toujours deux fous de couleurs distinctes (blanc et noire) en sorte que chacun d'eux ne
+                            quittera jamais sa case correspondante (blanc ou noire).
+                        </p>
+                        <img class="diagramme" src="ressources/images/diagrammes/diagramme_fou.png"
+                            alt="Diagramme du fou">
+                    </div>
+                    <div class="piece">
+                        <h4><img src="ressources/images/pieces/cavalier.png" alt="Image du cavalier">Le cavalier</h4>
+                        <hr />
+                        <p>
+                            Les cavaliers sont très unique à propos de leurs déplacement. Ils se déplacent d'une manière
+                            complètement différent des autres pièces : ils bougent de deux cases dans une direction,
+                            puis d’une à 90 degrés (imagine la forme de la lettre "L" en majuscule). En plus, ils sont
+                            les seuls pièces autorisées à passer par-dessus les autres pièces (alliées et adverses).
+                        </p>
+                        <img class="diagramme" src="ressources/images/diagrammes/diagramme_cavalier.png"
+                            alt="Diagramme du cavalier">
+                    </div>
+                    <div class="piece">
+                        <h4><img src="ressources/images/pieces/pion.png" alt="Image du pion">Le pion</h4>
+                        <hr />
+                        <p>
+                            Les pions sont les plus faibles au debut, mais pas nécessairement pour tout le jeu !
+                            D'abord, ils ne capturent pas de la même manière qu’ils se déplacent : ils avance seulement
+                            une seule case à moins que c'est leur premier déplacement; dans ce cas, un pion peut se
+                            deplacer deux cases au debut du jeu. Il capture (attaque) en diagonale sur l’une des deux
+                            cases situées en diagonale devant eux. Ils ne peuvent capturer en arrière. Lorsqu’une pièce
+                            adverse ou un alliée se trouve sur la case juste devant eux, ils seront bloqués, et parsuite
+                            ni la capture ni le saut par-dessus marche dans cette position.
+                        </p>
+                        <img class="diagramme" src="ressources/images/diagrammes/diagramme_pion.png"
+                            alt="Diagramme du pion">
+                    </div>
+                </div> <!-- fin div pieces -->
+
+                <!-- Règles spéciales du jeu -->
+                <h2 id="speciale">Règles spéciales</h2>
+                <p>Des règles spéciales ont été conçues pour le jeu afin de la rendre plus intéressante et amusante:</p>
+                <div class="regle">
+                    <h4>Promotion</h4>
+                    <p>
+                        La 1<sup>ère</sup> règle spéciale est la suivante: si un pion atteint la dernière rangé ou
+                        ligne, il peut faire ce qu'on appelle une promotion, donc ça sera possible pour lui de devenir
+                        n’importe quelle autre pièce (dame, tour, fou, cavalier), à l’exception du roi. Seuls les pions
+                        peuvent être promus.
+                    </p>
+                </div>
+                <div class="regle">
+                    <h4>En passant (e.p.)</h4>
+                    <p>
+                        En passant ou "la prise en passant" apparaître lorsqu’un pion avance de deux cases à son premier
+                        coup, et ce faisant se retrouve à côté d’un pion de l’adversaire qui ne peut donc plus le
+                        capturer de manière classique, cet autre pion à la possibilité de capturer le premier e.p.,
+                        comme s’il ne s’était déplacé que d’une case.
+                        Ce coup spécial doit être joué immédiatement, dans le tour qui suit le départ du pion pris.
+                    </p>
+                    <img class="diagramme" src="ressources/images/diagrammes/en_passant.gif"
+                        alt="Diagramme En Passant (e.p.)">
+                    <ol>
+                        <li>Le diagramme montre d'abord la position avant la prise en passant.</li>
+                        <li>Le pion noir avance de deux cases (cases d7-d5). </li>
+                        <li>Le pion noir est pris par le pion blanc sur la case d6 car le pion noir est d'abord passé
+                            sur la case d6 pour se rendre sur la case d5.<br /> <em>Cette prise n'est valable qu'après
+                                le déplacement du pion, elle ne sera plus possible au tour d'après.</em></li>
+                    </ol>
+                </div>
+                <div class="regle">
+                    <h4>Le Roque</h4>
+                    <p>
+                        Une autre règle spéciale s’appelle le roque. Ça permettre de mettre le roi à l’abri et faire
+                        entrer une tour dans le jeu en la sortant de son coin. Le joueur déplace son roi de deux cases à
+                        droite ou à gauche, puis pose la tour sur la case située immédiatement de l’autre côté de
+                        celui-ci. Attention, pour pouvoir roquer, Il y a quelques conditions qui doivent être respectées
+                        :
+                    <ol>
+                        <li>Il doit s’agir du premier déplacement du roi.</li>
+                        <li>Il doit s’agir du premier coup de la tour concernée.</li>
+                        <li>Pour roquer, aucune pièce ne doit se trouver entre le roi et la tour.</li>
+                        <li>Le roi ne peut pas se placer en échec ni traverser une ligne d'échec.</li>
+                    </ol>
+                    Il y a deux types de roque: le petit roque (vers la tour la plus proche) et le grand roque (vers la
+                    tour la plus éloignée).Quelle que soit la direction du roque, le roi se déplace toujours de deux
+                    cases.
+                    </p>
+                </div>
+
+                <!-- Partie finie -->
+                <h1 id="ending">Fin de la partie</h1>
+                <div class="regle">
+                    <h4>Échec et mat</h4>
+                    <p>
+                        Le but du jeu est de mettre le roi adverse en position échec et mat. Cela se produit lorsque le
+                        roi est mis en échec et ne peut pas s’échapper par n'importe quel moyen. Il n’y a que trois
+                        façons de sauver le roi quand il est en échec :
+                    <ul>
+                        <li>Le déplacer sans roquer.</li>
+                        <li>Bloquer la ligne d'attaque: parer l'échec avec une autre pièce.</li>
+                        <li>Capturer la pièce qui donne l’échec.</li>
+                    </ul>
+                    Si aucune de ces possibilités existe, la partie est finie et la partie est simplement déclarée
+                    terminée.
+                    </p>
+                </div>
+                <div class="regle">
+                    <h4>Partie nulle</h4>
+                    <p>
+                        Parfois, il n'y a de victoire, donc la partie est déclarée nulle. Il existe 5 manières d’arriver
+                        à une telle situation :
+                    <ul>
+                        <li>Le jeu aboutit à une impasse quand l’un des deux joueurs ne peut effectuer de coup légal à
+                            son tour de jeu, bien que son roi ne soit pas en échec. C’est ce qu’on appelle le pat
+                            (stalemate en anglais).</li>
+                        <li>Les deux joueurs peuvent se mettre en accord pour décalrer une partie nulle.</li>
+                        <li>Il n’y a pas suffisamment de pièces sur l’échiquier pour forcer un mat.</li>
+                        <li>Lorsqu'une même position est répétée "trois fois"<sub>1*</sub> mais pas nécessairement trois
+                            fois de suite.</li>
+                        <li>Cinquante coups ont été joués sans qu'un pion ait été déplacé ni qu'une capture de pièce ait
+                            eu lieu.</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <!-- S'améliorer au jeu -->
+                <div id="progresser">
+                    <h1>Progresser aux Échecs</h1>
+                    <p>
+                        Il y a plusieurs méthodes pour progresser au jeu. Le plus important est de s'amuser en
+                        jouant.<br />
+                        La liste non exhaustive suivante en cite quelques une :
+
+                    </p>
+                    <ul>
+                        <li>Jouer avec différents niveaux de joueurs.</li>
+                        <li>Etudier les ouvertures. Parmi les ouverturs populaires:
+                            <ol>
+                                <li><a target="_blank" href="https://www.chess.com/openings/italian-game">Italian
+                                        Game</a> </li>
+                                <li><a target="_blank" href="https://www.chess.com/openings/Sicilian-Defense">Sicilian
+                                        Defense</a></li>
+                                <li><a target="_blank" href="https://www.chess.com/openings/french-defense">French
+                                        Defense</a></li>
+                                <li><a target="_blank"
+                                        href="https://www.chess.com/openings/Ruy-Lopez-Opening">Ruy-Lopez</a></li>
+                                <li><a target="_blank" href="https://www.chess.com/openings/slav-defense">Slav
+                                        Defense</a></li>
+                                <li><a target="_blank" href="https://www.chess.com/openings/Queens-Gambit">Queen
+                                        Gambit</a></li>
+                            </ol>
+                        </li>
+                        <li>Résoudre des problèmes<sub>2*</sub> afin d'améliorer la vision et la capacité de calcul.
+                        </li>
+                        <li>Analyser ses parties pour apprendre des nos erreurs.</li>
+                        <li>
+                            Lire des livres :
+                            <ol>
+                                <li><a target="_blank"
+                                        href="https://www.amazon.ca/-/fr/Bobby-Fischer/dp/0553263153/ref=sr_1_1?gclid=EAIaIQobChMI3tLNtZua-wIVQw-tBh2lYQb2EAAYASAAEgJpCPD_BwE&hvadid=231002671191&hvdev=c&hvlocphy=9000255&hvnetw=g&hvqmt=e&hvrand=9074162833952792914&hvtargid=kwd-295815951746&hydadcr=23307_10308533&keywords=bobby+fischer+teaches+chess&qid=1667760343&qu=eyJxc2MiOiIwLjc5IiwicXNhIjoiMC40NSIsInFzcCI6IjAuNTAifQ%3D%3D&sr=8-1">Bobby
+                                        Fischer<sub>3*</sub> Teaches Chess</a></li>
+
+                                <li><a target="_blank"
+                                        href="https://www.amazon.ca/My-System-Aron-Nimzowitsch/dp/1880673851">My System
+                                        by Arron Nimzowitch</a></li>
+
+                                <li><a taget="_blank"
+                                        href="https://www.amazon.ca/-/fr/Mikhail-Tal/dp/1857442024/ref=sr_1_1?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2ZTI2YOLQHGOM&keywords=the+life+and+games+of+mikhail+tal&qid=1667760470&qu=eyJxc2MiOiIwLjAwIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&s=books&sprefix=the+life+and+games+of+mikhali+tal%2Cstripbooks%2C89&sr=1-1">The
+                                        Life and Games of Mikhail Tal</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div> <!-- fin id progresser-->
+
+                <div id="info">
+                    <h1>Informations additionnelles</h1>
+                    <p><strong>1<sup>*</sup> :</strong> Threefold Repetition.</p>
+                    <p>
+                        <strong>2<sup>*</sup> :</strong> Il y a beacoup des ressources pour essayer de resoudre des
+                        problèmes.
+                        <a target="_blank" href="https://gameknot.com/chess-puzzles.pl">Game Knot</a> est l'un de ces
+                        ressources.
+                    </p>
+                    <p>
+                        <strong>3<sup>*</sup> :</strong> Robert James Fischer, dit <a target="_blank"
+                            href="https://fr.wikipedia.org/wiki/Bobby_Fischer">Bobby Fischer</a>, né le 9 mars 1943 est
+                        un joueur d'échecs américain. Il est devenu le champion du monde en 1972.
+                    </p>
+                </div>
+                <blockquote cite="https://www.azquotes.com/quote/873100">
+                    "A thorough knowledge of the elements takes us more than half the road to mastership."<br />
+                    <cite>- Aron Nimzowitsch</cite>
+                </blockquote>
+            </td> <!-- fin cellue 5 -->
+        </tr> <!-- fin ligne 3 -->
+        <!-- ligne 4 -->
+        <tr id="footer">
+            <td colspan="2"> <!-- Cellule 6 -->
+                &copy; <a href="mailto:test@exemple.com">Author ...</a>
+                <a href="#header">Top Page</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
